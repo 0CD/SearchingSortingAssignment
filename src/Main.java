@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class SearchingSortingProject {
+public class Main {
     public static void main(String[] args) {
         int[] data;
         char choice;
