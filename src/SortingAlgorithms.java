@@ -105,12 +105,11 @@ class SortingAlgorithms {
         arr[j] = temp;
     }
 
-    public static void SortingPerformance() {
+    public static void sortingPerformance() {
         long[][] timeData = new long[4][10];
         long[][] comparisonData = new long[4][10];
         String[] sortingAlgorithms = {"Bubble Sort", "Selection Sort", "Merge Sort", "Quick Sort"};
 
-        // Generate random data and run sorting algorithms
         for (int i = 0; i < 10; i++) {
             int n = (i + 1) * 5000;
             int[] data = Data.generateRandomData(n, n);
@@ -120,27 +119,21 @@ class SortingAlgorithms {
 
                 long startTime = System.currentTimeMillis();
                 if (j == 0) {
-                    // Bubble Sort
                     bubbleSort(data.clone());
                 } else if (j == 1) {
-                    // Selection Sort
                     selectionSort(data.clone());
                 } else if (j == 2) {
-                    // Merge Sort
                     mergeSort(data.clone());
                 } else if (j == 3) {
-                    // Quick Sort
                     quickSort(data.clone());
                 }
                 long endTime = System.currentTimeMillis();
 
-                // Store results
                 timeData[j][i] = (endTime - startTime);
                 comparisonData[j][i] = ComparisonCounter.getComparisonCount();
             }
         }
 
-        // Print results
         for (int i = 0; i <= 10; i++) {
             if (i == 0) {
                 System.out.printf("%-40s", "\nSample size");

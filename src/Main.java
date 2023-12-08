@@ -73,7 +73,7 @@ public class Main {
 
                     break;
                 case '5':
-                    SortingAlgorithms.SortingPerformance();
+                    SortingAlgorithms.sortingPerformance();
 
                     break;
                 case 'q', 'Q':
